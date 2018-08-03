@@ -4,15 +4,28 @@ package cn.easybuy.entity;
  *用户表
  */
 public class User {
-    private int id;//用户id
+    private Integer id;//用户id
     private String loginName;//用户网名
     private String userName;//用户名
     private String password;//密码
-    private int   sex;//性别
+    private Integer   sex;//性别
     private String identityCode;//身份证号
     private String  email;//邮箱
-    private int    mobile;//手机号;
-    private int type;//用户类型
+    private String    mobile;//手机号;
+    private Integer type;//用户类型
+
+    public User(String loginName, String userName, String password, String email, String mobile) {
+        this.loginName = loginName;
+        this.userName = userName;
+        this.password = password;
+        this.email = email;
+        this.mobile = mobile;
+    }
+
+    public User(String loginName, String password) {
+        this.loginName = loginName;
+        this.password = password;
+    }
 
     @Override
     public String toString() {
@@ -29,11 +42,11 @@ public class User {
                 '}';
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -61,11 +74,11 @@ public class User {
         this.password = password;
     }
 
-    public int getSex() {
+    public Integer getSex() {
         return sex;
     }
 
-    public void setSex(int sex) {
+    public void setSex(Integer sex) {
         this.sex = sex;
     }
 
@@ -85,26 +98,26 @@ public class User {
         this.email = email;
     }
 
-    public int getMobile() {
+    public String getMobile() {
         return mobile;
     }
 
-    public void setMobile(int mobile) {
+    public void setMobile(String mobile) {
         this.mobile = mobile;
     }
 
-    public int getType() {
+    public Integer getType() {
         return type;
     }
 
-    public void setType(int type) {
+    public void setType(Integer type) {
         this.type = type;
     }
 
     public User() {
     }
 
-    public User(int id, String loginName, String userName, String password, int sex, String identityCode, String email, int mobile, int type) {
+    public User(Integer id, String loginName, String userName, String password, Integer sex, String identityCode, String email, String mobile, Integer type) {
         this.id = id;
         this.loginName = loginName;
         this.userName = userName;
